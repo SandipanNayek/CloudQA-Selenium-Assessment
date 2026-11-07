@@ -18,6 +18,21 @@ The solution uses multiple fallback locator strategies instead of depending on a
 **URL:**  
 https://app.cloudqa.io/home/AutomationPracticeForm
 
+## Video Demonstration
+
+**Assessment 1 – Execution Walkthrough**
+
+[▶ Watch Assessment 1 Video](https://drive.google.com/file/d/1DPnhzAM69pzeQxIkxIukvZKGHwKc2R9h/view?usp=sharing)
+
+The video demonstrates:
+
+- Project setup and structure.
+- Resilient locator implementation.
+- Selenium automation execution.
+- Automated interaction with form fields.
+- Field-level validation.
+- Overall PASS/FAIL results.
+
 ## Technologies Used
 
 - C#
@@ -41,18 +56,21 @@ The program verifies each field and displays its individual test result along wi
 To improve reliability against page modifications, the program uses multiple locator strategies with fallback mechanisms.
 
 ### First Name
+
 - Label-to-input association using the `for` attribute.
 - Label-based sibling and parent container locators.
 - Placeholder and `aria-label` attributes.
 - Fallback to ID and name attributes.
 
 ### Gender
+
 - Label-to-radio association.
 - Radio button value attribute.
 - Sibling and nested label relationships.
 - Fallback to ID and Gender container locators.
 
 ### State
+
 - Label-to-dropdown association.
 - Parent container and following dropdown locators.
 - Dropdown attributes and option text.
@@ -80,34 +98,40 @@ Before running the project, ensure that you have:
 
 ## Installation and Setup
 
-Clone the repository:
+### 1. Clone the Repository
 
 ```bash
 git clone <YOUR_GITHUB_REPOSITORY_URL>
 ```
 
-Navigate to the project directory:
+### 2. Navigate to the Project Directory
 
 ```bash
 cd CloudQA-Assessment-1
 ```
 
-Install the required Selenium packages:
+### 3. Install Required Selenium Packages
 
 ```bash
 dotnet add package Selenium.WebDriver
 dotnet add package Selenium.Support
 ```
 
+### 4. Restore Dependencies
+
+```bash
+dotnet restore
+```
+
 ## Execution
 
-Run the automation using the default URL:
+### Run Automation Using the Default URL
 
 ```bash
 dotnet run
 ```
 
-Run the automation with a configurable URL:
+### Run Automation With a Configurable URL
 
 ```bash
 dotnet run -- "https://app.cloudqa.io/home/AutomationPracticeForm"
@@ -125,7 +149,7 @@ State: PASS
 OVERALL: PASS
 ```
 
-### Execution Status
+## Execution Status
 
 - `PASS`: The field validation succeeded.
 - `FAIL`: The field validation failed or an exception occurred.
@@ -145,6 +169,12 @@ OVERALL: PASS
 
 ## Conclusion
 
-This solution demonstrates resilient browser automation using C# and Selenium WebDriver. By combining semantic locator strategies, fallback mechanisms, and validation, the program is designed to handle reasonable changes in the form's layout and HTML structure while automating the required fields.
+This solution demonstrates resilient browser automation using C# and Selenium WebDriver.
+
+By combining semantic locator strategies, fallback mechanisms, explicit waits, and validation, the program is designed to handle reasonable changes in the form's layout and HTML structure while automating the required fields.
 
 **Assessment 1 Status: Successfully executed on the original CloudQA Automation Practice Form.**
+
+## Video Link
+
+https://drive.google.com/file/d/1DPnhzAM69pzeQxIkxIukvZKGHwKc2R9h/view?usp=sharing
